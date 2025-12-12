@@ -13,11 +13,6 @@ This project demonstrates industry-standard cloud architecture, infrastructure a
 
 ![Architecture Diagram](IMG/4.png)
 
-```
-Frontend (Public Subnet) → Backend (Private Subnet) → Database (Private Subnet)
-                ↑ Internet Gateway ←→ NAT Gateway ←
-```
-
 ---
 
 # 🚀 **What We Built**
