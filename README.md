@@ -9,19 +9,19 @@ This project demonstrates industry-standard cloud architecture, infrastructure a
 
 ---
 
-# 📸 Architecture Overview
+#  Architecture Overview
 
 ![Architecture Diagram](IMG/4.png)
 
 ---
 
-# 🚀 **What We Built**
+#  **What We Built**
 
 Here is everything we deployed using Terraform:
 
 ---
 
-## 🏗️ **1. VPC (Virtual Private Cloud)**  
+##  **1. VPC (Virtual Private Cloud)**  
 Resource: `aws_vpc.my-vpc`  
 
 Your entire cloud network — a secure boundary for frontend, backend, and database tiers.
@@ -30,7 +30,7 @@ Your entire cloud network — a secure boundary for frontend, backend, and datab
 
 ---
 
-## 🧱 **2. Subnets**
+##  **2. Subnets**
 
 ### 🟦 Public Subnet → Frontend  
 Resource: `aws_subnet.pub-sub`  
@@ -52,7 +52,7 @@ RDS stays private—cannot be accessed from internet.
 
 ---
 
-## 🔌 **3. Internet Gateway (IGW)**  
+##  **3. Internet Gateway (IGW)**  
 Resource: `aws_internet_gateway.my-igw`
 
 Allows internet traffic for public resources.
@@ -61,7 +61,7 @@ Allows internet traffic for public resources.
 
 ---
 
-## 🌐 **4. NAT Gateway + Elastic IP**  
+##  **4. NAT Gateway + Elastic IP**  
 Resources:
 - `aws_eip.nat_eip`
 - `aws_nat_gateway.natgw`
@@ -73,7 +73,7 @@ Enables private subnets (backend) to access the internet **outbound only** (apt/
 ![EIP](IMG/5.png)
 ---
 
-## 🛣️ **5. Route Tables**
+##  **5. Route Tables**
 
 ### Public Route Table  
 Resource: `aws_default_route_table.main-rt`  
@@ -91,7 +91,7 @@ Subnet associations ensure traffic flows correctly.
 
 ---
 
-## 🔐 **6. Security Groups**
+##  **6. Security Groups**
 
 ### 🔵 Frontend SG  
 Allows HTTP (80) + SSH (22) from anywhere.
@@ -110,7 +110,7 @@ Allows MySQL traffic **only from backend** SG.
 
 ---
 
-## 💻 **7. EC2 Instances**
+##  **7. EC2 Instances**
 
 ### 🟦 Frontend EC2 (Public)  
 Resource: `aws_instance.frontend`  
@@ -143,13 +143,13 @@ Private database with no public exposure.
 
 ---
 
-# 🎓 **What We Learned (Very Important for GitHub & Interviews)**
+#  **What We Learned (Very Important for GitHub & Interviews)**
 
 This project helped us understand:
 
 ---
 
-## 🧠 **1. Core AWS Networking**
+##  **1. Core AWS Networking**
 - How VPC works  
 - How subnets isolate workloads  
 - Public vs Private subnet usage  
@@ -157,7 +157,7 @@ This project helped us understand:
 
 ---
 
-## 🌉 **2. Internet Gateways vs NAT Gateways**
+##  **2. Internet Gateways vs NAT Gateways**
 | Component | Direction | Used By |
 |----------|-----------|---------|
 | IGW | Inbound + Outbound Internet | Public resources |
@@ -167,7 +167,7 @@ This is **one of the biggest real-world AWS concepts**.
 
 ---
 
-## 🛡️ **3. Security Groups**
+##  **3. Security Groups**
 - Principle of least privilege  
 - Layer-by-layer protection  
 - Allowing traffic with **security group references** instead of CIDR  
@@ -176,7 +176,7 @@ Example: Backend SG only allows traffic from Frontend SG → very secure.
 
 ---
 
-## 🧩 **4. Terraform Skills Learned**
+##  **4. Terraform Skills Learned**
 - Resource creation  
 - Variables and reusability  
 - Route tables and associations  
@@ -185,7 +185,7 @@ Example: Backend SG only allows traffic from Frontend SG → very secure.
 
 ---
 
-## 🏛️ **5. 3-Tier Architecture Design**
+##  **5. 3-Tier Architecture Design**
 This architecture is used by real companies:
 
 | Tier      | Description |
@@ -198,7 +198,7 @@ You now know how to deploy all **3 layers securely**.
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```
 ├── main.tf
@@ -221,7 +221,7 @@ You now know how to deploy all **3 layers securely**.
 
 ---
 
-# ⚙️ Deployment Guide
+#  Deployment Guide
 
 ### 1️⃣ Initialize Terraform
 ```bash
@@ -250,7 +250,7 @@ terraform destroy -auto-approve
 
 ---
 
-# ⭐ Final Thoughts
+#  Final Thoughts
 
 This project is a **complete, real-world cloud deployment**.  
 You now understand:
@@ -263,6 +263,6 @@ This repository is a perfect **portfolio project** for Cloud, DevOps, and AWS ro
 
 ---
 
-# 👨‍💻 Author  
+#  Author  
 **Ganesh Jadhav — Cloud & DevOps Engineer**
 
