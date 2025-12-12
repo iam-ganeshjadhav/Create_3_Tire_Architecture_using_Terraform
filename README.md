@@ -11,7 +11,7 @@ This project demonstrates industry-standard cloud architecture, infrastructure a
 
 # 📸 Architecture Overview
 
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](IMG/4.png)
 
 ```
 Frontend (Public Subnet) → Backend (Private Subnet) → Database (Private Subnet)
