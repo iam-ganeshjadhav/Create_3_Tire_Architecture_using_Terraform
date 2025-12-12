@@ -1,4 +1,4 @@
-# 🌐 AWS 3-Tier Architecture Using Terraform  
+#  AWS 3-Tier Architecture Using Terraform  
 A complete, production-ready 3-tier cloud infrastructure built with **Terraform on AWS**, including:
 
 - 🟦 **Public tier** → Frontend EC2  
