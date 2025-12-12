@@ -1,3 +1,13 @@
+#tfstate file add to s3
+terraform {
+  backend "s3" {
+    bucket = "terraform-state-file-07"  #s3 bucket name 
+    key = "terraform.tfstate"   #state file path
+    region = "ap-south-1"      #bucket region 
+  }
+}
+
+#provider block
 provider "aws" {
   region = "ap-south-1"
 }
